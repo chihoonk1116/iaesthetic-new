@@ -1,0 +1,53 @@
+@use '../../mixin.scss' as *;
+
+.review-card-container{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: rgba($color: #E69C9C, $alpha: 0.3);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  @include respond(md){
+    width: 250px;
+    padding: 0.5rem 1rem;
+  }
+
+  @include respond(sm){
+    width: 250px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  h3, p{
+    margin: 0.8rem 0;
+
+    @include respond(sm){
+       margin: 0.5rem 0;
+    }
+
+  }
+
+  .stars{
+    color: rgba($color: #F5A623, $alpha: 0.5);
+  }
+
+  .username-tag{
+    color: var(--color-pink)
+  }
+
+ 
+
+}
+
+.review-card-container:hover{
+  transform: translateY(-5px);
+  background-color: rgba($color: #E69C9C, $alpha: 0.8);;
+}
+

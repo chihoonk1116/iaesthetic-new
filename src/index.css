@@ -1,0 +1,128 @@
+:root{
+  /* TEXT VARIABLES */
+  --text-light: #fff;
+  --text-grey: rgb(77, 77, 77);
+  --text-light-grey : #6D6E71;
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Cormorant", sans-serif;
+  --menu-weight: 400;
+  --menu-font-size: 20px;
+  --h1-size: 2.5rem;
+  --h2-size: 2.5rem;
+  --h3-size: 2rem;
+  --h4-size: 1.5rem;
+  --h5-size: 1.3rem;
+  --p-size: 1rem;
+
+  /* width */
+  --standard-max-width: 1200px;
+
+  /* SPACING VARIABLES */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* colors */
+  --color-pink: #E69C9C;
+  --color-lightpink: #F6ECEB;;
+  --color-herobg: #E0C3BF;
+  --color-star: #F5A623;
+  --color-success: #198754;
+}
+
+body{
+  margin: 0;
+  font-family: var(--body-font);
+  overflow-x: hidden;
+}
+
+section{
+  height: 100vh;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+section > .container{
+  max-width: var(--standard-max-width);
+  margin: auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: var(--h1-size);
+  font-family: var(--heading-font);
+}
+h2{
+  font-size: var(--h2-size);
+  font-family: var(--heading-font);
+}
+h3{
+  font-size: var(--h3-size);
+  font-family: var(--heading-font);
+}
+h4{
+  font-size: var(--h4-size);
+}
+h5{
+  font-size: var(--h5-size);
+}
+p{
+  font-size: var(--p-size);
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+button{
+  background-color: var(--color-pink);
+  border: none;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #FFF;
+  color: var(--color-pink);
+}
+
+@media only screen and (max-width: 992px) {
+  :root{
+    --h1-size: 2.2rem;
+    --h2-size: 2rem;
+    --h3-size: 1.8rem;
+    --h4-size: 1.4rem;
+    --h5-size: 1.2rem;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  :root{
+    --h1-size: 2rem;
+    --h2-size: 1.8rem;
+    --h3-size: 1.5rem;
+    --h4-size: 1.3rem;
+    --h5-size: 1.1rem;
+    --p-size: 0.9rem;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  :root{
+    --h1-size: 1.8rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.3rem;
+    --h4-size: 1.1rem;
+    --h5-size: 1rem;
+    --p-size: 0.8rem;
+  }
+
+}

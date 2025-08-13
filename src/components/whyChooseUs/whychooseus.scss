@@ -1,0 +1,119 @@
+@use '../../mixin.scss' as *;
+
+.whychooseus-section{
+
+  background-color: var(--color-pink);
+  overflow: hidden;
+
+  h2{
+    font-size: 1.5rem;
+    color: #FFF;
+    text-transform: uppercase;
+    max-width: var(--standard-max-width);
+    margin: 0;
+  }
+
+  h3{
+    color: var(--text-grey);
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    list-style: none;
+    color: var(--text-grey);
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include respond(md){
+      font-size: 0.9rem;
+    }
+  }
+
+  li svg{
+    margin-right: 0.3rem;
+  }
+
+
+  .container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(xl){
+      flex-direction: column;
+      // margin-top: 4rem;
+    }
+
+    .whychooseus-text-contents{
+      flex: 1;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include respond(xl){
+        flex: none;
+        height: auto;
+      }
+
+      .subtitle{
+        font-size: 4rem;
+        text-transform: none;
+        color: var(--text-grey);
+        font-style: italic;
+        line-height: 1;
+
+        .highlight{
+          color: #FFF;
+        }
+      }
+    }
+
+    .orbiting-circles-wrapper{
+      flex: 1;
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(lg){
+        height: 550px;
+        flex: none;  
+        margin-top: 4rem;
+      }
+
+      @include respond(xs){
+        height: 500px;
+        flex: none;  
+        margin-top: 2rem;
+      }
+
+      img{
+        aspect-ratio: 4/1;
+        width: 240px;
+        height: auto;
+
+        @include respond(sm){
+          width: 160px;
+        }
+      }
+
+      .orbit-container{
+
+      }
+    }
+
+  }
+
+}

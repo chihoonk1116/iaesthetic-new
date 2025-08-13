@@ -1,0 +1,22 @@
+.location-section{
+  background-color: var(--color-lightpink);
+  height: 50vh;
+  padding: 1rem 0 2rem 0;
+
+  color: var(--text-grey);
+
+  h2{
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p{
+    color: var(--text-grey);
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}

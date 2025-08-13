@@ -1,0 +1,42 @@
+@use '../../mixin.scss' as *;
+
+.qna-section{
+
+  min-height: 50vh;
+  height: auto;
+  padding: 1rem 0 0 0;
+  background-color: var(--color-lightpink);
+
+  @include respond(lg){
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  @include respond(md){
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  h2{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-pink);
+    margin: 1rem 0;
+
+    @include respond(lg){
+      font-size: 3rem;
+    }
+
+    @include respond(sm){
+      font-size: 2.5rem;
+    }
+  }
+
+  .question-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.7rem;
+  }
+}

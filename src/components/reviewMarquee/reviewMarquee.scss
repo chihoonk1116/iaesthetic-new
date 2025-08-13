@@ -1,0 +1,33 @@
+.marquee-container,
+.marquee-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.marquee-content{
+
+}
+
+
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(calc(-100% - 1rem));
+	}
+}
+
+@keyframes marqueeRev {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(calc(100% + 1rem));
+	}
+}
