@@ -1,0 +1,42 @@
+// .btn-grad{
+//   --c1: #E69C9C;
+//   --c2: #f1d7d2;
+//   --c3: #E69C9C;
+
+//   background: linear-gradient(100deg, var(--c1), var(--c2), var(--c3));
+//   background-size: 300% 300%;
+//   animation: gradient-shift 6s ease-in-out infinite alternate;
+
+//   font-weight:600; cursor:pointer;
+// }
+
+// @keyframes gradient-shift{
+//   0%   { background-position: 0% 70%; }
+//   100% { background-position: 100% 0%; }
+// }
+
+@property --angle-conic{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.btn-conic{
+  --angle-conic: 0deg;
+  --a1: #E69C9C;
+  --a2: #f1d7d2;
+  --a3: #E69C9C;
+
+  background: conic-gradient(from var(--angle-conic),
+              var(--a1), var(--a2), var(--a3), var(--a1));
+  animation: rotate-grad 12s linear infinite;
+
+}
+
+@keyframes rotate-grad{
+  to { --angle-conic: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-conic{ animation: none; }
+}

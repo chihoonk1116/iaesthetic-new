@@ -30,20 +30,20 @@ const QnACard = ({question, answer}) => {
 
   return (
     <div className='question-card-wrapper'>
-      <h3>
-        {question} 
-        <IoIosArrowDropdown onClick={() => setIsOpen(!isOpen)} />
-      </h3>
+      <div className='question-title-wrapper' onClick={() => setIsOpen(!isOpen)}>
+        <h3>{question}</h3> 
+        <IoIosArrowDropdown />
+      </div>
       <AnimatePresence mode='wait'>
         {isOpen && 
-          <motion.h4
+          <motion.p
             variants={variants}
             initial="hidden"
             animate="visible"
             exit="hidden"
           >
             {answer}
-          </motion.h4>
+          </motion.p>
         }
       </AnimatePresence>
       

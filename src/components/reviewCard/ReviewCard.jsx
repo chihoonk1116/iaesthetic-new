@@ -6,7 +6,7 @@ const ReviewCard = ({username, rates, comment, date}) => {
 
   return (
     <div className='review-card-container'>
-      <div className="">
+      <div className="review-card-top">
         <div className="stars">
           <FaStar/>
           <FaStar/>
@@ -16,12 +16,12 @@ const ReviewCard = ({username, rates, comment, date}) => {
         </div>
         <p>{date}</p>
       </div>
-      <div className="">
+      <div className="review-card-bottom">
         <p>
           {comment && comment.slice(0, 200) + '...'}
         </p>
+        <p className='username-tag'>by {username}</p>
       </div>
-      <p className='username-tag'>by {username}</p>
     </div>
   )
 }

@@ -46,7 +46,7 @@ section{
 section > .container{
   max-width: var(--standard-max-width);
   margin: auto;
-  padding: 0 1rem;
+  padding: 0rem;
   box-sizing: border-box;
 }
 
@@ -68,8 +68,14 @@ h4{
 h5{
   font-size: var(--h5-size);
 }
-p{
+
+p, li{
   font-size: var(--p-size);
+}
+
+a{
+  text-decoration: none;
+  color: unset;
 }
 
 img{
@@ -92,9 +98,74 @@ button:hover{
   color: var(--color-pink);
 }
 
+
+.top-gradient,
+.bottom-gradient{
+	position: absolute;
+	width: 100%;
+	height: 120px;
+}
+
+.right-gradient,
+.left-gradient{
+	position: absolute;
+	width: 200px;
+	height: 100%;
+
+}
+
+.top-gradient{
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+  #e0c3bf 0%,
+  rgba(207, 167, 161, 0.45) 60%, /* #CFA7A1 */
+  rgba(207, 167, 161, 0) 100%
+	);
+	top:0;
+}
+
+.right-gradient{
+  width: 100%;
+  background: linear-gradient(
+    to left,
+  #e0c3bf 0%,
+  rgba(207, 167, 161, 0.45) 60%, /* #CFA7A1 */
+  rgba(207, 167, 161, 0) 100%
+	);
+	right: 0;
+}
+
+.left-gradient{
+  width: 100%;
+  background: linear-gradient(
+    to right,
+  #e0c3bf 0%,
+  rgba(207, 167, 161, 0.45) 60%, /* #CFA7A1 */
+  rgba(207, 167, 161, 0) 100%
+	);
+	left: 0;
+}
+
+
+.bottom-gradient{
+  width: 100%;
+	background: linear-gradient(
+		 to top,
+    #e0c3bf 0%,
+    rgba(207, 167, 161, 0.45) 60%, /* #CFA7A1 */
+    rgba(207, 167, 161, 0) 100%
+	);
+	bottom: 0;
+}
+
 @media only screen and (max-width: 992px) {
+  section > .container{
+    padding: 0 1rem;
+  }
+
   :root{
-    --h1-size: 2.2rem;
+    --h1-size: 2.5rem;
     --h2-size: 2rem;
     --h3-size: 1.8rem;
     --h4-size: 1.4rem;
@@ -105,12 +176,16 @@ button:hover{
 
 @media only screen and (max-width: 768px) {
   :root{
-    --h1-size: 2rem;
+    --h1-size: 2.3rem;
     --h2-size: 1.8rem;
     --h3-size: 1.5rem;
     --h4-size: 1.3rem;
     --h5-size: 1.1rem;
     --p-size: 0.9rem;
+  }
+
+  a{
+    font-size: 0.9rem;
   }
 
 }
@@ -125,4 +200,9 @@ button:hover{
     --p-size: 0.8rem;
   }
 
+  a{
+    font-size: 0.8rem;
+  }
+
 }
+

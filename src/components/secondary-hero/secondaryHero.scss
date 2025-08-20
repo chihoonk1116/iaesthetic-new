@@ -1,0 +1,137 @@
+@use '../../mixin.scss' as *;
+
+.secondary-hero-section{
+  padding: 0;
+  background-color: var(--color-herobg);
+  height: 70vh;
+  overflow: hidden;
+
+
+  .container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    white-space: pre-line;
+    overflow: hidden;
+
+  }
+
+  .content_wrapper{
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    padding: 1rem;
+
+    @include respond(lg){
+      width: 100%;
+    }
+
+    h1{
+      color: var(--color-pink);
+      font-size: calc(1.1 * var(--h1-size));
+      margin: 0;
+    }
+
+
+    p{
+      color: #FFF;
+      line-height: 2rem;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+
+    }
+
+    .heading-wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+  }
+
+  .hero-image_wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include respond(sm){
+      height: 100%;
+    }
+
+    img{
+      height: auto;
+      transform: translateY(-25%);
+
+      @include respond(md){
+        transform: none;
+        object-fit: cover;
+      }
+    
+    }
+
+    &::after{
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5 );
+    }
+  }
+  
+  .cta-wrapper{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: min-content;
+
+    transition: transform 0.3s ease;
+
+    button{
+      color: #FFF;
+      background-color: var(--color-pink);
+      border: none;
+      padding: 0.6rem 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+
+    }
+
+    svg{
+      height: 30px;
+      width: 25px;
+      color: var(--text-grey);
+      animation: shakeX 1.5s ease-in-out infinite;
+    }
+  }
+
+  .cta-wrapper:hover{
+    transform: translateY(-5px);
+  }
+  
+}
+
+@keyframes shakeX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .secondary-hero-section .hero-image_wrapper img{
+      height: 100%;
+    }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-export default function AnimatedNumber({ from = 0, to, duration = 2, decimals = 0 }) {
+export default function AnimatedNumber({ from = 0, to, duration = 1, decimals = 0 }) {
   const controls = useAnimation();
   const [count, setCount] = useState(from);
 

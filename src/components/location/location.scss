@@ -1,9 +1,17 @@
 .location-section{
   background-color: var(--color-lightpink);
-  height: 50vh;
-  padding: 1rem 0 2rem 0;
-
+  height: 90vh;
+  box-sizing: border-box;
   color: var(--text-grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container{
+    width: 100%;
+  }
+
 
   h2{
     text-transform: uppercase;

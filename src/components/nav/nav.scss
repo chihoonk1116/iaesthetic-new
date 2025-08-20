@@ -71,18 +71,72 @@
   font-size: 1.2rem;
   color: #FFF;
   
-
-  p{
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    padding: 1.2rem;
-    margin: 0;
+  .dropdown-span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;;
   }
 
-  p:hover{
+  a{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 2rem;
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+  }
+
+  a:hover{
     background-color: #FFF;
     color: var(--color-pink);
   }
+
+  a{
+    position: relative;
+  }
+
+  ul{
+    position: absolute;
+    width: 200%;
+    top: 100%;
+    z-index: 1;
+    left: 0;
+    background-color: var(--color-lightpink);
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+
+   li{
+      list-style: none;
+      color: var(--text-grey);
+
+      a{
+        display: inline-block;
+        padding: 1rem 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #FFF;
+        color: var(--color-pink);
+
+        &:hover{
+          background-color: var(--color-pink);
+          color: #FFF;
+        }
+      }
+      
+     
+    
+    }
+  }
+
+  
+
+
 }
 
 #desktop-nav-menu{
@@ -93,7 +147,7 @@
 
 #mobile-nav-menu{
   height: 100vh;
-  width: 250px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,9 +157,9 @@
   right: 0;
   z-index: 999;
   background-color: var(--color-pink);
-  row-gap: 2rem;
+  row-gap: 1.5rem;
 
-  transform: translateX(250px);
+  // transform: translateX(250px);
   transition: all 0.2s ease-in-out;
 
   .nav-menu_wrapper{
@@ -113,7 +167,34 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  .nav-link{
+
+    flex-direction: column;
+
+    .dropdown-ul{
+      position: static;
+      width: 100%;
+      background-color: unset;
+      margin-top: 1rem;
+
+      a{
+        color: var(--color-pink);
+        background-color: unset;
+      }
+
+      a:hover{
+        color: #FFF;
+        background-color: var(--color-pink);
+      }
+    }
+
+    svg{
+      width: 20px;
+      height: 20px;
+    }
   }
 
   p{
@@ -121,7 +202,7 @@
     border-radius: 10px
   };
 
-  svg{
+  .close-svg{
     width: 30px;
     height: 30px;
     padding: 0.3rem;
@@ -131,18 +212,16 @@
     cursor: pointer;
   }
 
-  svg:hover{
+  .close-svg:hover{
     background-color: #FFF;
     color: var(--color-pink);
   }
 
+ 
+
   @include respond(lg){
     display: flex;
   }
-}
-
-#mobile-nav-menu.active{
-  transform: translateX(0);
 }
 
 .bar{

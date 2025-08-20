@@ -17,7 +17,7 @@ export default function CrossStarParticles({
       const blink = Math.random() < blinkProbability;
       const delay = Math.random() * 5;
       const blinkDuration = 1 + Math.random() * 10;
-      const floatDuration = 5 + Math.random() * 5; // 움직임 속도
+      const floatDuration = 5 + Math.random(); // 움직임 속도
       arr.push({
         size,
         left,

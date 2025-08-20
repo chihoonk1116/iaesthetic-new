@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './hero.scss'
 import heroImage from '/assets/images/main-hero.jpg'
 import AnimatedNumber from '../animatedNumber/AnimatedNumber';
+import AnimatedButton from '../animatedButton/AnimatedButton';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { CiStar } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
@@ -16,7 +17,7 @@ const Hero = () => {
   const containerVariants = {
     visible: {
       transition: {
-        staggerChildren: 0.3
+        staggerChildren: 0.1
       }
     },
     hidden: {},
@@ -42,7 +43,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       controls.start("visible")
-    }, 1000)
+    }, 2000)
 
     return () => clearTimeout(timer)
   }, [controls])
@@ -67,6 +68,9 @@ const Hero = () => {
       if(factor !== 0.8 && window.innerWidth < 768){
         setFactor(0.7)
       }
+      if(factor !== 0.3 && window.innerWidth < 520){
+        setFactor(0.4)
+      }
     }
     window.addEventListener('resize', handleResize)
 
@@ -82,7 +86,7 @@ const Hero = () => {
         <div className="content_wrapper">
           <div className="indicator-animation">
             <p>
-              <AnimatedNumber to={20} duration={3}/>+ years and
+              <AnimatedNumber to={20} duration={1}/>+ years experieces
             </p>
             <motion.div 
               className="stars-wrapper"
@@ -112,11 +116,13 @@ const Hero = () => {
               Personalized facial treatments, laser care, and permanent makeup- trusted by locals for over 20 years 
             </p>
             <div className="cta-wrapper">
-              <button>Services</button>
-              <IoIosArrowRoundForward />
+              <AnimatedButton title={'Services'}/>
+              <AnimatedButton title={'Promotions'}/>
             </div>
           </motion.div>
+          
         </div>
+        
         <div 
           className="hero-image_wrapper" 
           style={
@@ -128,9 +134,10 @@ const Hero = () => {
           <img src={heroImage} alt="" />
         </div>
         {curWidth < 768 && 
-          <div className="bottom-gradient"></div>
+          <div className="background-overlay"></div>
         }
       </div>
+      
     </section>
   )
 }
