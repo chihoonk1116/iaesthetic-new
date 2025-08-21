@@ -20,18 +20,21 @@ const Services = () => {
             OnParticles="true"
             subTitles={['Signature Facials', 'Anti-againg & Lifting']}
             imageSrc = {skincareImageSrc}
+            id = 'facial-service'
           />
           <ServiceCard 
             title={`Hair Loss Prevention\n& Hair Removal`}
-            description="Enjoy the benefits of healthier and more radiant skin with our signature facials" 
-            services={['European Deep Cleansing', 'Hydroimpact', 'Acne Repair']} 
+            description="Experience advanced solutions that restore confidence — from strengthening and revitalizing thinning hair to achieving smooth, hair-free skin with lasting results." 
+            services={['DS scalp care', 'Aton Laser Waxing', 'Waxing']} 
             imageSrc = {legImageSrc}
+            id = 'hairservice-card'
           />
           <ServiceCard 
             title="Permanent Makeup" 
-            description="Enjoy the benefits of healthier and more radiant skin with our signature facials" 
-            services={['European Deep Cleansing', 'Hydroimpact', 'Acne Repair']} 
+            description="Wake up flawless every day with expertly applied enhancements that define your natural beauty and save time in your routine." 
+            services={['eyebrow','eyeline','lipline']} 
             imageSrc = {eyebrowImageSrc}
+            id = 'makeupservice-card'
           />
         </div>
       </div>

@@ -113,7 +113,7 @@ const Hero = () => {
           >
             <h1>Expert Skincare & Facial Spa <br></br> in Flushing, NY</h1>
             <p>
-              Personalized facial treatments, laser care, and permanent makeup- trusted by locals for over 20 years 
+              Personalized facial treatments, acne repair, and permanent makeup-trusted by locals for over 20 years 
             </p>
             <div className="cta-wrapper">
               <AnimatedButton title={'Services'}/>

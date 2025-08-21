@@ -3,6 +3,10 @@ import './testimonial.scss'
 import ReviewMarquee from '../reviewMarquee/ReviewMarquee'
 
 const Testimonial = ({reviewData}) => {
+
+  const filteredData = reviewData.filter(
+    review => review.starRating === 'FIVE' || review.starRating === 'FOUR')
+  
   return (
     <section className='testimonial-section'>
       <div className='container'>
@@ -12,11 +16,11 @@ const Testimonial = ({reviewData}) => {
         </h2>
         <div className="review-marquees-wrapper">
           <ReviewMarquee 
-            reviews={reviewData.slice(0, Math.ceil(reviewData.length / 2))} 
+            reviews={filteredData.slice(0, Math.ceil(reviewData.length / 2))} 
             animation="marquee 30s linear infinite"
           />
           <ReviewMarquee 
-            reviews={reviewData.slice(Math.ceil(reviewData.length / 2))}
+            reviews={filteredData.slice(Math.ceil(reviewData.length / 2))}
             animation="marqueeRev 30s linear infinite"
           />
         </div>

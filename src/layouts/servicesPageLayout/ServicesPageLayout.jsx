@@ -93,8 +93,8 @@ const ServicesPageLayout = ({services, navMenus}) => {
       <div className="container">
         <div className="facial-services_heading">
           <div className="button-container">
-              {navMenus.map((menu) => (
-                <button onClick={() => scrollToCard(menu.pivot)}>
+              {navMenus.map((menu, ind) => (
+                <button key={ind} onClick={() => scrollToCard(menu.pivot)}>
                   {menu.title}
                 </button>
               ))}

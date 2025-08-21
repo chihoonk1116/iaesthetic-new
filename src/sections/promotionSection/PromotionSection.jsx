@@ -48,12 +48,12 @@ const PromotionSection = () => {
       <div className="container">
         {promotions.map((promotion, index) => (
           <div 
-            className="promotion-card"
+            className={`promotion-card ${promotion.status === 'end' ? 'end-promotion' : ''}`}
             ref={(el) => (promotionRefs.current[index] = el)}
             style={{marginBottom: `calc(${(promotions.length - index - 1) * 5}rem)`}}
           >
             <div className="promotion-card_left">
-              <p className='promotion-card_order'>01</p>
+              <p className='promotion-card_order'>{index + 1}</p>
               <div className="">
                 <h3>{promotion.title}</h3>
                 <p>{promotion.description}</p>

@@ -13,38 +13,40 @@ import lip from '/assets/images/lip.jpg'
 import eyeline from '/assets/images/eyeline.jpg'
 // promotion image
 import exosomePromotion from '/assets/images/exosomepromotion.png'
+import eyecreamPromotion from '/assets/images/poster.png'
+import reviewPromotion from '/assets/images/reviewevent.png'
 
 export const Faqs = [
   {
-    questionTitle: 'Which skin types benefit most from the European Deep Facial Cleansing?',
+    title: 'Which skin types benefit most from the European Deep Facial Cleansing?',
     answer: 'The European Deep Facial Cleansing is particularly effective for individuals with oily and acne-prone skin. It thoroughly removes impurities and unclogs pores, leaving your complexion refreshed, smooth, and glowing.'
   },
   {
-    questionTitle: 'How is the Water Therapy Deep Cleansing different from other deep cleansing treatments?',
+    title: 'How is the Water Therapy Deep Cleansing different from other deep cleansing treatments?',
     answer: 'This refreshing deep cleansing treatment uses a dedicated Water Therapy machine to effectively unclog pores and provide a thorough cleanse. A gentle peel may also be applied, depending on your skin type, to brighten your complexion, leaving you with a clean, glowing, and healthy look.'
   },
   {
-    questionTitle: 'What technology is used in the Acne Repair Treatment, and is it painful?',
+    title: 'What technology is used in the Acne Repair Treatment, and is it painful?',
     answer: "The Acne Repair Treatment aims to balance your skin's pH and strengthen its protective barrier using a plasma skin device for recovery, sterilization, inflammation reduction, and accelerated healing. Depending on your skin type, a gentle peel may also be applied to address excess oil and clogged pores. The process is designed to minimize discomfort."
   },
   {
-    questionTitle: 'Is there anything specific I need to do to prepare for a treatment?',
+    title: 'Is there anything specific I need to do to prepare for a treatment?',
     answer: "Generally, there aren't any special preparations required. However, for certain treatments, there might be specific instructions. We'll provide detailed guidance when you book your appointment, or you can feel free to ask us before your visit."
   },
   {
-    questionTitle: 'Can I resume my daily activities immediately after a treatment?',
+    title: 'Can I resume my daily activities immediately after a treatment?',
     answer: "Most of our treatments are designed to allow you to return to your daily activities immediately afterward. If there are any specific post-treatment precautions for a particular service, we will inform you beforehand."
   },
   {
-    questionTitle: 'How long does each treatment typically take?',
+    title: 'How long does each treatment typically take?',
     answer: "The exact duration of each treatment can vary depending on your skin condition and personalized needs. We will provide a more precise estimate during your consultation."
   },
   {
-    questionTitle: 'How does the Hydroimpact Treatment benefit my skin?',
+    title: 'How does the Hydroimpact Treatment benefit my skin?',
     answer: "The Hydroimpact Treatment utilizes hydrogen-rich water to penetrate deep into your skin cells. This helps to clear out free radicals, boost antioxidant defenses, slow down signs of aging, soothe inflammation, and address various skin concerns, resulting in a glowing and refreshed complexion."
   },
   {
-    questionTitle: "I'm not sure which treatment is best for my skin. How can I choose?",
+    title: "I'm not sure which treatment is best for my skin. How can I choose?",
     answer: "We offer professional consultations to help recommend the most suitable treatment for your specific skin type and concerns. We encourage you to schedule a consultation so we can assess your needs and guide you."
   },
 
@@ -68,7 +70,9 @@ export const facialservices = [
       'Anti-Aging Benefits : Helps slow visible signs of aging while soothing inflammation. ', 
       'Revitalized Skin : Leaves the complexion refreshed, luminous, and deeply renewed.'
     ],
-    machines: ['Hydroimpact']
+    machines: [
+      {name: 'Hydroimpact', refUrl : ''}
+    ]
   },
   {
     subTitle: 'Signature Facial',
@@ -80,7 +84,10 @@ export const facialservices = [
       'Plasma Therapy : Reduces bacteria, inflammation, and accelerates healing of breakouts.', 
       'Clearer Complexion : Gentle peel to regulate oil, unclog pores, and prevent future acne.'
     ],
-    machines: ['Plasma', 'As needed']
+    machines: [
+      {name: 'Plasma', refUrl : ''},
+      {name: 'As needed', refUrl : ''}
+    ]
   },
   {
     subTitle: 'Signature Facial',
@@ -92,7 +99,9 @@ export const facialservices = [
       'Customized Renewal : Gentle peel application brightens and refines skin texture.', 
       'Healthy Glow : Promotes a fresh, radiant complexion that feels clean and balanced.'
     ],
-    machines: ['Water Therapy']
+    machines: [
+      {name: 'Water Therapy', refUrl : ''},
+    ]
   },
   {
     subTitle: 'Anti-agaging & Lifting',
@@ -103,7 +112,9 @@ export const facialservices = [
       'Non-Invasive Lifting : Uses advanced ultrasound technology to stimulate collagen and elastin.', 
       'Firm & Youthful : Improves skin elasticity and contours for a lifted, rejuvenated look.', 
       'Long-Lasting Results : Promotes deep tissue regeneration for smoother, firmer skin.'],
-    machines: ['V-Max']
+    machines: [
+      {name: 'V-MAX', refUrl : ''},
+    ]
   },
   {
     subTitle: 'Anti-agaging & Lifting',
@@ -115,7 +126,10 @@ export const facialservices = [
       "Hydrating & tightening – Deep moisture retention and minimized pores", 
       'Targeted formulas – Variants available for overall rejuvenation, deep scars, hydration, and eye area',
     ],
-    machines: ['Microneedling', 'Curazet']
+    machines: [
+      {name: 'Microneedling', refUrl : ''},
+      {name: 'Curazet', refUrl : ''},
+    ]
   },
   {
     subTitle: 'Anti-agaging & Lifting',
@@ -127,22 +141,28 @@ export const facialservices = [
       'Faster recovery – Speeds healing and reduces redness after procedures', 
       'Clinically proven – Trusted in professional Korean clinics and available in advanced at-home formulations'
     ],
-    machines: ['Microneedling', 'Curazet']
+    machines: [
+      {name: 'Microneedling', refUrl : ''},
+      {name: 'Curazet', refUrl : ''},
+    ]
   }
 ]
 
 export const HairServices = [
   {
     subTitle: 'Hair Loss Prevention',
-    title: 'Exosome',
+    title: 'DS Scalp Care',
     imgSrc : hairprevention,
     description: 'A cutting-edge regenerative treatment using extracellular vesicles—tiny lipid-bound messengers packed with growth factors, proteins, lipids, and RNA—to enhance intercellular communication and drive skin healing. Widely adopted in Korean clinics, exosome therapy accelerates repair post-laser or microneedling, reduces inflammation, boosts collagen synthesis, and improves tone and texture.',
     points: [
       'Cellular communication – Directs skin repair and rejuvenation', 
       'Faster recovery – Speeds healing and reduces redness after procedures', 
       'Clinically proven – Trusted in professional Korean clinics and available in advanced at-home formulations'
-    ]
-  },
+    ],
+    machines: [
+        {name: 'Microneedling', refUrl : ''},
+      ]
+    },
   {
     subTitle: 'Hair Removal',
     title: 'Waxing',
@@ -236,18 +256,21 @@ export const prices = [
 
 export const promotions = [
   {
-    title: 'New Eyecream Promotion',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium id, iusto quo doloremque quidem porro hic ullam? Aspernatur, nesciunt.',
-    imageSrc: exosomePromotion
+    title: 'Review Event',
+    description: 'How did you like our service? Get a SUNCREAM when you show us your support with your review and photos on Google!',
+    imageSrc: reviewPromotion,
+    status: 'current'
+  },
+  {
+    title: 'Lifting up with Exosome',
+    description: 'Powered by high-purity exosomes, this treatment regenerates skin, boosts firmness, and brightens tone — delivering complete care in a single ampoule.',
+    imageSrc: exosomePromotion,
+    status: 'current'
   },
   {
     title: 'New Eyecream Promotion',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium id, iusto quo doloremque quidem porro hic ullam? Aspernatur, nesciunt.',
-    imageSrc: exosomePromotion
-  },
-  {
-    title: 'New Eyecream Promotion',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium id, iusto quo doloremque quidem porro hic ullam? Aspernatur, nesciunt.',
-    imageSrc: exosomePromotion
+    description: 'Chosen by millions, this next-generation eye cream lifts 8 facial zones, smooths deep wrinkles, and delivers complete anti-aging care — all in one.',
+    imageSrc: eyecreamPromotion,
+    status: 'end'
   },
 ]

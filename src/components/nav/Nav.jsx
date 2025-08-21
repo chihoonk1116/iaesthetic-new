@@ -6,7 +6,7 @@ import logoSrc from '/assets/images/logo.png'
 import { IoIosCloseCircleOutline, IoIosArrowDropdown } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NavMenu = ({setIsMouseEnter, isMouseEnter}) => {
+const NavMenu = ({setIsOpen, setIsMouseEnter, isMouseEnter}) => {
 
   const variants = {
     hidden: {
@@ -108,7 +108,7 @@ const Nav = () => {
           <div className="bar"/>
         </div>
         <div id="desktop-nav-menu">
-          <NavMenu setIsMouseEnter={setIsMouseEnter} isMouseEnter = {isMouseEnter}/>
+          <NavMenu setIsOpen={setIsOpen} setIsMouseEnter={setIsMouseEnter} isMouseEnter = {isMouseEnter}/>
         </div>
       </div>
       <AnimatePresence>
@@ -119,7 +119,7 @@ const Nav = () => {
             exit="exit"
             variants={variants}
           >
-            <NavMenu setIsMouseEnter={setIsMouseEnter} isMouseEnter = {isMouseEnter}/>
+            <NavMenu setIsOpen={setIsOpen} setIsMouseEnter={setIsMouseEnter} isMouseEnter = {isMouseEnter}/>
             <IoIosCloseCircleOutline className='close-svg' onClick={() => setIsOpen(!isOpen)} />
           </motion.div>
         )}

@@ -3,10 +3,17 @@ import './serviceCard.scss'
 import CrossStarParticles from '../particles/CrossStarParticles'
 
 const ServiceCard = ({
-  title, description ,services, services2 = null, OnParticles, subTitles = null, imageSrc
+  title, 
+  description, 
+  services, 
+  services2 = null, 
+  OnParticles, 
+  subTitles = null, 
+  imageSrc,
+  id = null
 }) => {
   return (
-    <div className='servicecard-container'>
+    <div className='servicecard-container' id={`${id}`}>
       {OnParticles && 
         <CrossStarParticles count={100} blinkProbability={0.4}/>
       }
